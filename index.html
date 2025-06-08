@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ONGC Oil Well Monitoring</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>ONGC Oil Well Monitoring</h1>
+    <p>Enter and track vital oil well parameters</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Input Well Data</h2>
+      <form id="wellForm">
+        <label>
+          Well Name/ID:
+          <input type="text" name="wellId" required>
+        </label>
+        <label>
+          Pressure (psi):
+          <input type="number" name="pressure" required>
+        </label>
+        <label>
+          Temperature (°C):
+          <input type="number" name="temperature" required>
+        </label>
+        <label>
+          Flow Rate (bbl/day):
+          <input type="number" name="flowRate" required>
+        </label>
+        <label>
+          Equipment Status:
+          <select name="status" required>
+            <option value="Normal">Normal</option>
+            <option value="Maintenance">Maintenance</option>
+            <option value="Alarm">Alarm</option>
+          </select>
+        </label>
+        <label>
+          Comments:
+          <textarea name="comments" rows="2"></textarea>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Recent Entries</h2>
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>Well ID</th>
+            <th>Pressure (psi)</th>
+            <th>Temperature (°C)</th>
+            <th>Flow Rate</th>
+            <th>Status</th>
+            <th>Comments</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Entries will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ONGC | Oil Well Monitoring Project</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
